@@ -69,7 +69,7 @@ class LinkedList (object):
     current.next = new_link
 
   # add an item in an ordered list in ascending order
-  # assume that the list is already sorted
+  # assume that the list is already sorte
   def insert_in_order (self, data): 
     new_link = Link(data)
     previous = self.first
@@ -329,125 +329,124 @@ class LinkedList (object):
       return result
       
   def main():
-    pass
-  # # Test methods insert_first() and __str__() by adding more than
-  # # 10 items to a list and printing it.
-  # print("Testing inserting first and string representation:")
-  # list_one = LinkedList()
-  # for i in range(15):
-  #   list_one.insert_first(i)
-  # print(list_one)
+    # Test methods insert_first() and __str__() by adding more than
+    # 10 items to a list and printing it.
+    print("Testing inserting first and string representation:")
+    list_one = LinkedList()
+    for i in range(15):
+      list_one.insert_first(i)
+    print(list_one)
 
-  # # Test method insert_last()
-  # print("Testing insertion at end:")
-  # list_two = LinkedList()
-  # for i in range (20, 40, 2):
-  #   list_two.insert_last(i)
-  # print(list_two)
+    # Test method insert_last()
+    print("Testing insertion at end:")
+    list_two = LinkedList()
+    for i in range (20, 40, 2):
+      list_two.insert_last(i)
+    print(list_two)
 
-  # # Test method insert_in_order()
-  # print("In order insertion:")
-  # list_two.insert_in_order(37)
-  # list_two.insert_in_order(21)
-  # list_two.insert_in_order(15)
-  # print(list_two)
+    # Test method insert_in_order()
+    print("In order insertion:")
+    list_two.insert_in_order(37)
+    list_two.insert_in_order(21)
+    list_two.insert_in_order(15)
+    print(list_two)
 
-  # # Test method get_num_links()
-  # print("Testing getting number of links:")
-  # len_one = list_one.get_num_links()
-  # print(len_one)
+    # Test method get_num_links()
+    print("Testing getting number of links:")
+    len_one = list_one.get_num_links()
+    print(len_one)
 
-  # # Test method find_unordered() 
-  # # Consider two cases - data is there, data is not there 
-  # print("Testing unordered search:")
-  # list_four = LinkedList()
-  # list_four.insert_last(14)
-  # list_four.insert_last(17)
-  # list_four.insert_last(1)
-  # list_four.insert_last(30)
+    # Test method find_unordered() 
+    # Consider two cases - data is there, data is not there 
+    print("Testing unordered search:")
+    list_four = LinkedList()
+    list_four.insert_last(14)
+    list_four.insert_last(17)
+    list_four.insert_last(1)
+    list_four.insert_last(30)
 
-  # unordered_one = list_four.find_unordered(72)
-  # unordered_two = list_four.find_unordered(17)
+    unordered_one = list_four.find_unordered(72)
+    unordered_two = list_four.find_unordered(17)
 
-  # print(unordered_one)
-  # print(unordered_two)
-
-
-  # # Test method find_ordered() 
-  # print("Testing ordered search:")
-
-  # # Consider two cases - data is there, data is not there 
-  # ordered_one = list_two.find_ordered(100)
-  # ordered_two = list_two.find_ordered(21)
-
-  # print(ordered_one)
-  # print(ordered_two)
-
-  # # Test method delete_link()
-  # print("Testing deleting a link and returning it:")
-
-  # # Consider two cases - data is there, data is not there 
-  # del_one = list_one.delete_link(100)
-  # del_two = list_one.delete_link(11)
-
-  # print(del_one)
-  # print(del_two)
-  
-  # # Test method copy_list()
-  # print("Testing making copies:")
-  # print(list_one.copy_list())
-
-  # # Test method reverse_list()
-  # print("Testing reversing a list:")
-  # print(list_one.reverse_list())
+    print(unordered_one)
+    print(unordered_two)
 
 
-  # # Test method sort_list()
-  # print("Testing sorting the list:")
-  # sorted_list = list_four.sort_list()
-  # print(sorted_list)
+    # Test method find_ordered() 
+    print("Testing ordered search:")
 
-  # # Test method is_sorted()
-  # # Consider two cases - list is sorted, list is not sorted
-  # print("Testing whether list is sorted: ")
-  # print("Expect false,", list_one.is_sorted())
+    # Consider two cases - data is there, data is not there 
+    ordered_one = list_two.find_ordered(100)
+    ordered_two = list_two.find_ordered(21)
 
-  # sorted_list = LinkedList()
-  # sorted_list.insert_first(0)
-  # sorted_list.insert_last(1)
-  # sorted_list.insert_last(2)
-  # sorted_list.insert_last(3)
-  # print("Expect true,", sorted_list.is_sorted())
-  
+    print(ordered_one)
+    print(ordered_two)
 
-  # # Test method is_empty()
-  # print("Testing whether list is empty:")
-  # print("Expect false,",list_four.is_empty())
-  # empty_list = LinkedList()
-  # print("Expect true,", empty_list.is_empty())
+    # Test method delete_link()
+    print("Testing deleting a link and returning it:")
 
-  # # Test method merge_list()
-  # print("list one:", list_one)
-  # print("list two:", list_two)
-  # merged = list_one.merge_list(list_two)
-  # print("merged:", merged)
+    # Consider two cases - data is there, data is not there 
+    del_one = list_one.delete_link(100)
+    del_two = list_one.delete_link(11)
 
-  # # Test method is_equal()
-  # # Consider two cases - lists are equal, lists are not equal
-  # print("Testing unordered search:")
-  # print(list_one.is_equal(list_two))
+    print(del_one)
+    print(del_two)
+    
+    # Test method copy_list()
+    print("Testing making copies:")
+    print(list_one.copy_list())
 
-  # # Test remove_duplicates()
-  # print("Testing removing duplicates:")
-  # list_six = LinkedList()
-  # list_six.insert_last(6)
-  # list_six.insert_last(6)
-  # list_six.insert_last(7)
-  # list_six.insert_last(7)
-  # list_six.insert_last(7)
+    # Test method reverse_list()
+    print("Testing reversing a list:")
+    print(list_one.reverse_list())
 
-  # removed = list_six.remove_duplicates()
-  # print(removed)
+
+    # Test method sort_list()
+    print("Testing sorting the list:")
+    sorted_list = list_four.sort_list()
+    print(sorted_list)
+
+    # Test method is_sorted()
+    # Consider two cases - list is sorted, list is not sorted
+    print("Testing whether list is sorted: ")
+    print("Expect false,", list_one.is_sorted())
+
+    sorted_list = LinkedList()
+    sorted_list.insert_first(0)
+    sorted_list.insert_last(1)
+    sorted_list.insert_last(2)
+    sorted_list.insert_last(3)
+    print("Expect true,", sorted_list.is_sorted())
+    
+
+    # Test method is_empty()
+    print("Testing whether list is empty:")
+    print("Expect false,",list_four.is_empty())
+    empty_list = LinkedList()
+    print("Expect true,", empty_list.is_empty())
+
+    # Test method merge_list()
+    print("list one:", list_one)
+    print("list two:", list_two)
+    merged = list_one.merge_list(list_two)
+    print("merged:", merged)
+
+    # Test method is_equal()
+    # Consider two cases - lists are equal, lists are not equal
+    print("Testing unordered search:")
+    print(list_one.is_equal(list_two))
+
+    # Test remove_duplicates()
+    print("Testing removing duplicates:")
+    list_six = LinkedList()
+    list_six.insert_last(6)
+    list_six.insert_last(6)
+    list_six.insert_last(7)
+    list_six.insert_last(7)
+    list_six.insert_last(7)
+
+    removed = list_six.remove_duplicates()
+    print(removed)
 
 
   if __name__ == "__main__":
